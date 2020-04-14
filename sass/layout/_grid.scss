@@ -1,0 +1,21 @@
+.row{
+max-width: $grid-width;
+background-color: #eee;
+margin: 0 auto;
+
+&:not(:last-child){
+    margin-bottom: $vertical-gutter;
+}
+
+@include clearfix;
+
+.column-1-2{
+    width: calc((100% - #{$horizontal-gutter})/2);
+    background-color: red;
+    float: left;
+    
+    &:not(:last-child){
+        margin-right: $horizontal-gutter;
+    }
+}
+}
