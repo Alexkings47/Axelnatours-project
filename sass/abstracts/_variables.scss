@@ -4,12 +4,18 @@ $color-primary-light: #7ed56f;
 $color-primary: #55c57a;
 $color-primary-dark: #28b485;
 $color-white:#fff;
-$color-grey: #777;
-$color-grey-light:#f7f7f7;
 
-$grid-width:114rem;
+$color-grey:#777;
+
+$color-grey-light:hsl(0, 0%, 97%);
+$color-grey-lighten:rgba(226, 222, 222, 0.788);
+$color-orange-light:#ffb900;
+$color-orange-dark:#ff9730;
+
+$grid-width:100rem;
 $vertical-gutter:8rem;
 $horizontal-gutter:6rem;
 
 $default-font-size:1.6rem;
-$table-height:30rem;
+$table-height:35rem;
+

@@ -1,0 +1,96 @@
+.tours{
+    position: relative;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+   
+&__popular{
+          height: 50rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        border-radius: 3px; 
+        overflow: hidden;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.466);
+        width: 100%;
+       
+        &--front{
+            
+        }
+        &--back{
+            background-image:
+             linear-gradient(to right bottom,$color-orange-light,
+             $color-orange-dark); 
+             transform: rotateY(180deg);
+        }
+    }
+         &:hover  &__popular--front{
+        transform: rotateY(-180deg);
+        }
+        &:hover  &__popular--back{
+            transform: rotateY(0deg);
+            }
+
+            &__image{
+                height: 20rem;
+                background-size: cover;
+                background-blend-mode: screen;
+                -webkit-clip-path: polygon(0 0, 100% 0,100% 75%,0 100% );
+                clip-path: polygon(0 0, 100% 0,100% 75%,0 100%  );
+
+                &--1{
+                    background-image: linear-gradient(to right bottom,$color-orange-light,
+                    $color-orange-dark),
+                    url( ../images/img/nat-5.jpg);
+                }
+                &--1{
+                    background-image: linear-gradient(to right bottom,$color-orange-light,
+                    $color-orange-dark),
+                    url( ../images/img/nat-5.jpg);
+                }
+
+                &--1{
+                    background-image: linear-gradient(to right bottom,$color-orange-light,
+                    $color-orange-dark),
+                    url( ../images/img/nat-5.jpg);
+                }
+
+
+            }
+            &__heading{
+                text-transform: uppercase;
+                color: $color-white;
+                position: absolute;
+                top:10rem;
+                right: 2rem;
+                text-align: right;
+                padding: 1rem 1.5rem;
+                font-size: 2rem;
+                font-weight: 400;
+                width: 55%;
+                -webkit-box-decoration-break: clone;
+                box-decoration-break: clone;
+
+                &--1{
+                    background-image: linear-gradient(to right bottom,$color-orange-light,
+                    $color-orange-dark);
+                }
+
+            }
+
+    
+            &__detail{
+                ul{
+                    list-style: none;
+                    li{
+                        padding: 1rem;
+                        width:65%;
+                        margin: 0 auto;
+                        &:not(:last-child){
+                            border-bottom: 1px solid $color-grey-lighten;
+                        }
+                    }
+                }
+            }
+    }
