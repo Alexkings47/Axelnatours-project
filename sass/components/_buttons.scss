@@ -36,6 +36,10 @@
     &--white{
         background-color: $color-white;
         color: $color-grey;
+
+        &::after{
+            background-color: white;
+        }
     }
     
     &::after{
@@ -78,6 +82,15 @@
         }
     }
     
+    &--green{
+        background-color: $color-primary;
+        color: $color-white;
+        
+        &::after{
+            background-color: $color-primary;
+        }
+        
+    }
     }
     
 
