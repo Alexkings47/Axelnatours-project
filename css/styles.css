@@ -165,6 +165,20 @@ html, body {
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all .2s;
+  display: inline-block;
+  letter-spacing: .2rem; }
+  .heading-secondary:hover {
+    transform: skewX(2deg) skewY(15deg);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -205,6 +219,9 @@ html, body {
 .u-margin-bottom-middle {
   margin-bottom: 3rem; }
 
+.smaller-size {
+  font-size: 3rem; }
+
 .row {
   max-width: 100rem;
   margin: 0 auto; }
@@ -243,7 +260,10 @@ html, body {
   margin-top: -10rem;
   text-align: center;
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0; }
+  padding: 25rem 0 20rem 0; }
+
+.section-stories {
+  background-color: #f7f7f7; }
 
 .composition {
   position: relative; }
@@ -374,17 +394,41 @@ html, body {
       font-size: 5rem;
       font-weight: 30; }
 
-.heading-secondary {
-  font-size: 3.5rem;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
-  text-transform: uppercase;
-  font-weight: 700;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: all .2s;
-  display: inline-block;
-  letter-spacing: .2rem;
-  text-align: center; }
-  .heading-secondary:hover {
-    transform: skewX(2deg) skewY(15deg);
-    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+.story {
+  transform: skewX(-12deg);
+  background-color: white;
+  width: 75%;
+  padding: 6rem;
+  padding-left: 9rem;
+  margin: 0 auto;
+  box-shadow: 0 1.5rem 6rem rgba(0, 0, 0, 0.815); }
+  .story > * {
+    transform: skewX(12deg); }
+  .story__shape {
+    height: 15rem;
+    width: 15rem;
+    background-color: red;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-5rem) skewX(12deg); }
+    .story__shape-image {
+      height: 100%;
+      transform: translateX(-4rem) scale(1.4); }
+    .story__shape-text {
+      text-transform: uppercase;
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      opacity: 0;
+      transform: translate(-50%, 20%);
+      color: white;
+      transition: all .5s; }
+  .story:hover .story__shape-text {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__shape-image {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(70%); }
