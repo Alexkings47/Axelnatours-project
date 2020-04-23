@@ -1,0 +1,100 @@
+.form{
+    
+    margin: 0 auto;
+    h2{
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+    &__group:not(:last-child){
+        margin-bottom: 2rem;
+    }
+    // &__group{
+    //     width: 70%;
+    //     display: block;
+
+    // }
+    &__input{
+        width: 70%;
+        border-bottom: 3px solid transparent;
+        display: block;
+        padding: 1rem;
+        font-family: inherit;
+        color: inherit;
+        transition: all .2s;
+        border-radius: 4px;
+
+        &::-webkit-input-placeholder{
+            color:$color-grey-lighten;
+        }
+        &:focus:invalid{
+            border-bottom: 3px solid $color-orange-dark;
+        }
+
+        &:focus{
+            outline: none;
+            box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.233);
+            border-bottom: 3px solid $color-primary;
+            
+        }
+    }
+    &__label{
+        transition: all .2s;
+        margin-top: .7rem;
+        display: inline-block;
+    }
+
+ &__input:placeholder-shown + &__label{
+     opacity: 0;
+     visibility: hidden;
+     transform: translateY(-4rem);
+
+ }  
+ &__group{
+     &-radio{
+         padding-left: 2rem;
+     }
+     &-label{
+         cursor: pointer;
+         position: relative;
+         padding-left: 5rem;
+         color: inherit;
+     }
+     &-radio-button{
+         height: 3rem;
+         width: 3rem;
+         border-radius: 50%;
+         border: 5px solid $color-primary;
+         display: inline-block;
+         position: absolute;
+         top: -0.8rem;
+         left: -1rem;
+
+         &::after{
+             content: "";
+             height: 1.5rem;
+             width: 1.5rem;
+             border-radius: 50%;
+             display:block;
+             background-color: $color-primary;
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             opacity: 0;
+             transition: opacity .2s;
+         }
+     }
+
+ } 
+ &__width{
+     width: 45%;
+     display: inline-block;
+ }
+ &__group-radio:checked ~ &__group-label &__group-radio-button::after{
+     opacity: 1;
+
+ }
+ &__group-radio{
+     display: none;
+ }
+}
